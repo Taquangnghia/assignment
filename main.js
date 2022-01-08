@@ -1,6 +1,26 @@
 import './style.css'
+import Navigo from "navigo";
+import HomePage from './vidu1/home';
+import Header from './vidu1/header';
+import Footer from './vidu1/footer';
+// import  AboutPage from "./vidu1/home";
 
-document.querySelector('#app').innerHTML = `
-  <h1>Hello Vite!</h1>
-  <a href="https://vitejs.dev/guide/features.html" target="_blank">Documentation</a>
-`
+
+const router = new Navigo("/");
+const render = (header,content,footer) => {
+  document.getElementById("main").innerHTML = content.print();
+  document.getElementById("header").innerHTML = header.print();
+  document.getElementById("footer").innerHTML =footer.print();
+
+};
+router.on({
+  "/": () => {
+    render(Header,HomePage,Footer );
+    
+  },
+  "/about":() => {
+    render("<h1> about Page </h1>");
+  },
+
+});
+router.resolve(); 

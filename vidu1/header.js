@@ -7,7 +7,7 @@ const Header = {
        </div>
        <nav class=" bg-orange-600">
         <ul class=" flex  text-white">
-          <li class="px-5 hover:bg-cyan-600"><a href="/" class="leading-10 ">Trang chủ</a></li>
+          <li class="px-5  hover:bg-cyan-600"><a href="/" class="leading-10 ">Trang chủ</a></li>
           <li class="px-5  hover:bg-cyan-600"><a href="/about" class="leading-10">Tuyển sinh</a></li>
           <li class="px-5  hover:bg-cyan-600" ><a href="/product" class="leading-10">Chương trình đào tạo</a></li>
           <li class="px-5  hover:bg-cyan-600"><a href="#" class="leading-10">Góc sinh viên</a></li>

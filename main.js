@@ -15,7 +15,7 @@ const render = (header,content,footer) => {
 };
 router.on({
   "/": () => {
-    render(Header,HomePage,Footer );
+    render(Header,HomePage,Footer);
     
   },
   "/about":() => {

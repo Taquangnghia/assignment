@@ -7,16 +7,15 @@ import Footer from './vidu1/footer';
 
 
 const router = new Navigo("/");
-const render = (header,content,footer) => {
-  document.getElementById("main").innerHTML = content.print();
+const render = (header,HomePage,footer) => {
   document.getElementById("header").innerHTML = header.print();
+  document.getElementById("main").innerHTML = HomePage.print();
   document.getElementById("footer").innerHTML =footer.print();
 
 };
 router.on({
   "/": () => {
     render(Header,HomePage,Footer);
-    
   },
   "/about":() => {
     render("<h1> about Page </h1>");

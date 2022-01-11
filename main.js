@@ -3,22 +3,32 @@ import Navigo from "navigo";
 import HomePage from './vidu1/home';
 import Header from './vidu1/header';
 import Footer from './vidu1/footer';
+import ChiTiet from './vidu1/chitiet';
+import sigin from './dangnhap/signin';
+import signup from './dangnhap/signup';
 // import  AboutPage from "./vidu1/home";
-
-
 const router = new Navigo("/");
-const render = (header,HomePage,footer) => {
-  document.getElementById("header").innerHTML = header.print();
-  document.getElementById("main").innerHTML = HomePage.print();
-  document.getElementById("footer").innerHTML =footer.print();
+const render = (HomePage) => {
+  document.getElementById("header").innerHTML = Header.print();
+  document.getElementById("main").innerHTML = HomePage;
+  document.getElementById("footer").innerHTML =Footer.print();
+ 
 
 };
 router.on({
   "/": () => {
-    render(Header,HomePage,Footer);
+    render(HomePage.print());
   },
-  "/about":() => {
-    render("<h1> about Page </h1>");
+  "/chitiet/:id":({ data }) => {
+    const {id} = data;
+    render(ChiTiet.print(id));
+  },
+  "/dangnhap":() => { 
+    render(signup.print());
+   
+  }, 
+  "/hienthi" :() =>{
+    render(sigin.print());
   },
 
 });

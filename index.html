@@ -10,13 +10,55 @@
   <body>
     <div class="container mx-auto">
      <header class="h-22 bg-blue-600" id="header">
-
+      <div id="lgo">
+        <img src="https://i.picsum.photos/id/885/200/200.jpg?hmac=RQ5YecoOv-yZMfoibCEw6EjqLgnpWvSrGEQmkcoAdaw" alt="" class="mx-auto pb-5 pt-5" > 
+       </div>
+       <nav class=" bg-orange-600">
+        <ul class=" flex  text-white">
+          <li class="px-5  hover:bg-cyan-600"><a href="/" class="leading-10 ">Trang chủ</a></li>
+          <li class="px-5  hover:bg-cyan-600"><a href="/chitiet" class="leading-10">Tuyển sinh</a></li>
+          <li class="px-5  hover:bg-cyan-600" ><a href="/product" class="leading-10">Chương trình đào tạo</a></li>
+          <li class="px-5  hover:bg-cyan-600"><a href="/hienthi" class="leading-10">hien thi</a></li>
+          <li class="px-5  hover:bg-cyan-600 mr-20"><a href="/dangnhap" class="leading-10">dangnhap</a></li> 
+          <div  class=" pl-20" >
+           <input type="text" class="ml-20 mt-2">
+           <button class="ml-3 ml-20 bg-slate-900 pr-3 pl-2">Tim kiem </button> 
+          </div>
+        </ul>
+      </nav>
      </header>
      <div id="main">
-       
+      <h1 class="font-bold font-sans uppercase text-[#393c45] py-4 text-xl mt-3">Tin tức học tập</h1>
+      <div class="grid grid-cols-3 gap-4">
+      ${data.map((post) => /*html*/`
+      <div class="border-[1px] ">
+          <a href="/chitiet/${post.id}">
+          <img class="mx-auto mt-5" src="${post.img}" alt="">
+          <h3 class="py-2 font-medium font-sans hover:text-[#282f53] mx-auto mt-3 ml-3">${post.title}</h3>
+          <p class="pb-3 pt-1 pl-10 text-xs pr-2  mt-3 ml-3">${post.desc}</p>
+          </a>
+      </div>
+      `).join("")}
+      </div>
+
+      <h1 class="font-bold font-sans uppercase text-[#393c45] py-4 text-xl mt-3">Thong tin</h1>
+      <div class="grid grid-cols-3 gap-4">
+      ${data.map((post) => /*html*/`
+      <div class="border-[1px] ">
+          <a href="#">
+          <img class="mx-auto mt-5" src="${post.img}" alt="">
+          <h3 class="py-2 font-medium font-sans hover:text-[#282f53] mx-auto pl-10 text-red-600 mt-3 ml-3">${post.title}</h3>
+          <p class="pb-3 pt-1 pl-10 text-xs pr-2 mt-3 ml-3">${post.desc}</p>
+          </a>
+      </div>
+      `).join("")}
+      </div>
      </div>  
      <footer class="bg-cyan-900 mt-6 pb-5 " id="footer">
-       
+      <div class="mx-auto">
+        <h2 class="text-center pt-5">nghiatqph1324</h2>
+
+      </div>
      </footer>
     </div>
    

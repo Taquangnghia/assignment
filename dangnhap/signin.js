@@ -66,8 +66,7 @@ const sigin = {
     </div>
   </div>
 </div>
-</div>
-        
+</div>    
         `
     },
 

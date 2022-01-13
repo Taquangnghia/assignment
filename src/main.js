@@ -1,4 +1,4 @@
-import './style.css'
+
 import Navigo from "navigo";
 import HomePage from './vidu1/home';
 import Header from './vidu1/header';
@@ -6,6 +6,11 @@ import Footer from './vidu1/footer';
 import ChiTiet from './vidu1/chitiet';
 import sigin from './dangnhap/signin';
 import signup from './dangnhap/signup';
+import news from './dangnhap/admin/news';
+import add from "../dangnhap/admin/add";
+import edits from "./dangnhap/admin/edit";
+import data from "./vidu1/data";
+import dasbos from "./dangnhap/admin/dasbos";
 // import  AboutPage from "./vidu1/home";
 const router = new Navigo("/");
 const render = (HomePage) => {
@@ -23,13 +28,26 @@ router.on({
     const {id} = data;
     render(ChiTiet.print(id));
   },
-  "/dangnhap":() => { 
+  "/dangky":() => { 
     render(signup.print());
    
   }, 
   "/hienthi" :() =>{
     render(sigin.print());
   },
+  "/news" :() =>{
+    render(news.print());
+  },
+  "/add":()=>{
+    render(add.print());
+  },
+  "/edit/:id" :({data})=>{
+    const {id} = data;
+    render(edits.print(id));
+  },
+  "/dasbos" :()=>{
+    render(dasbos.print());
+  }
 
 });
 router.resolve(); 

@@ -1,6 +1,8 @@
+import dasbos from "./dasbos";
 const add = {
     print (){
         return /*html*/ `
+        ${dasbos.print()}
         <div>
           <div class="mt-5 md:mt-0 md:col-span-2">
             <form action="#" method="POST">

@@ -1,24 +1,17 @@
 
 import Navigo from "navigo";
 import HomePage from './vidu1/home';
-import Header from './vidu1/header';
-import Footer from './vidu1/footer';
 import ChiTiet from './vidu1/chitiet';
 import sigin from './dangnhap/signin';
 import signup from './dangnhap/signup';
 import news from './dangnhap/admin/news';
-import add from "../dangnhap/admin/add";
 import edits from "./dangnhap/admin/edit";
-import data from "./vidu1/data";
 import dasbos from "./dangnhap/admin/dasbos";
+import add from "./dangnhap/admin/add";
 // import  AboutPage from "./vidu1/home";
-const router = new Navigo("/");
+const router = new Navigo("/", {linksSelector :"a"});
 const render = (HomePage) => {
-  document.getElementById("header").innerHTML = Header.print();
   document.getElementById("main").innerHTML = HomePage;
-  document.getElementById("footer").innerHTML =Footer.print();
- 
-
 };
 router.on({
   "/": () => {
@@ -46,7 +39,7 @@ router.on({
     render(edits.print(id));
   },
   "/dasbos" :()=>{
-    render(dasbos.print());
+    render(dasbos.print() );
   }
 
 });

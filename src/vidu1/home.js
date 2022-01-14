@@ -4,9 +4,9 @@ import Footer from "./footer";
 import Header from "./header";
 import menu from "./menu";
 
-const HomePage ={
-    print(){
-       return /* html */ `
+const HomePage = {
+    print() {
+        return /* html */ `
        <div class="container mx-auto">
        <div class="h-22 bg-blue-600">
        ${Header.print()}
@@ -21,7 +21,7 @@ const HomePage ={
   ${Footer.print()}
 </div>
 
-       `;   
+       `;
     },
-};  
+};
 export default HomePage;

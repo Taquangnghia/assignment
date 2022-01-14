@@ -1,7 +1,8 @@
 import dasbos from "./dasbos";
+
 const add = {
-    print (){
-        return /*html*/ `
+    print() {
+        return /* html */ `
         ${dasbos.print()}
         <div>
           <div class="mt-5 md:mt-0 md:col-span-2">
@@ -66,7 +67,7 @@ const add = {
         </div>
       </div>
         
-        `
-    }
-}
+        `;
+    },
+};
 export default add;

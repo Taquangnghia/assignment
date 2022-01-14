@@ -1,6 +1,15 @@
+import Header from "../vidu1/header";
+import menu from "../vidu1/menu";
+import Footer from "../vidu1/footer";
+
 const sigin = {
-    print (){
-        return /*html*/ `
+    print() {
+        return /* html */ `
+        <div class="container mx-auto">
+       <div class="h-22 bg-blue-600">
+       ${Header.print()}
+       </div>
+       ${menu.print()}
         <!-- This example requires Tailwind CSS v2.0+ -->
         <div class="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div class="max-w-md w-full space-y-8">
@@ -58,7 +67,9 @@ const sigin = {
         </form>
         </div>
         </div>
-        `
+        </div>
+        <div>${Footer.print()} </div>
+        `;
     },
 
 };

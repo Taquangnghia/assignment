@@ -2,7 +2,7 @@ import data from "../../vidu1/data";
 import dasbos from "./dasbos";
 
 const news = {
-    print (){
+    print() {
         return /* html */ `
         ${dasbos.print()}
         <div class="flex flex-col">
@@ -29,28 +29,28 @@ const news = {
                     </th>
                   </tr>
                 </thead>
-  ${data.map((data)=> /*html*/`
+  ${data.map((post) => /* html */`
   <tbody class="bg-white divide-y divide-gray-200">
   <tr>
     <td class="px-6 py-4 whitespace-nowrap">
       <div class="flex items-center">
         <div class="flex-shrink-0 h-10 w-10">
-          <img class="h-10 w-10 rounded-full" src="${data.img}" alt="">
+          <img class="h-10 w-10 rounded-full" src="${post.img}" alt="">
         </div>
         <div class="ml-4">
         </div>
       </div>
     </td>
     <td class="px-6 py-4 whitespace-nowrap">
-      <div class="text-sm text-gray-900">${data.title}</div>
+      <div class="text-sm text-gray-900">${post.title}</div>
       <div class="text-sm text-gray-500">Optimization</div>
     </td>
    
     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-    ${data.desc}
+    ${post.desc}
     </td>
     <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-      <a href="/edit/${data.id}" class="text-indigo-600 hover:text-indigo-900">Edit</a>
+      <a href="/edit/${post.id}" class="text-indigo-600 hover:text-indigo-900">Edit</a>
     </td>
   </tr>
 
@@ -64,7 +64,7 @@ const news = {
           </div>
         </div>
       </div>
-        `
+        `;
     },
 };
 export default news;

@@ -1,6 +1,15 @@
-const signup ={
-    print(){
+import Header from "../vidu1/header";
+import menu from "../vidu1/menu";
+import Footer from "../vidu1/footer";
+
+const signup = {
+    print() {
         return /* html */`
+        <div class="container mx-auto">
+        <div class="h-22 bg-blue-600">
+        ${Header.print()}
+        </div>
+        ${menu.print()}
         <div class="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div class="max-w-md w-full space-y-8">
         <div>
@@ -59,7 +68,9 @@ const signup ={
         </form>
         </div>
         </div>
-        `
+        </div>
+        <div>${Footer.print()} </div>
+        `;
     },
 };
 export default signup;

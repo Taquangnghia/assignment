@@ -3,9 +3,9 @@ import dasbos from "./dasbos";
 
 const edits = {
 
- print(id){
-     const printss = data.find((post) => post.id === id);
-     return /*html*/ `
+    print(id) {
+        const printss = data.find((post) => post.id === id);
+        return /* html */ `
      ${dasbos.print()}
      <div>
      <div class="mt-5 md:mt-0 md:col-span-2">
@@ -53,7 +53,7 @@ const edits = {
      </div>
    </div>
  </div>
-     `
- },
+     `;
+    },
 };
 export default edits;

@@ -16,5 +16,11 @@ module.exports = {
       indent: ['error', 4],
       'eol-last': ['error', 'never'],
       'Linebreak-style': 0,
+      semi: ["error", "always"],
+    quotes: ["error", "double"],
+    indent: ["error", 4],
+    "eol-last": ["error", "never"],
+    "linebreak-style": 0
   },
+
 };

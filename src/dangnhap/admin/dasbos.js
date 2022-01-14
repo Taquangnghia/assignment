@@ -1,6 +1,6 @@
 const dasbos = {
-    print (){
-        return /* html*/ `
+    print() {
+        return /* html */ `
         <div class="min-h-full">
         <nav class="bg-gray-800">
           <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -88,7 +88,7 @@ const dasbos = {
           </div>
       
         
-        `
+        `;
     },
 };
 export default dasbos;
